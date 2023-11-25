@@ -5,10 +5,10 @@ import com.example.cleanarchitecture.domain.AbstractBuyPeopleImpl;
 import com.example.cleanarchitecture.domain.DealServiceImpl;
 import com.example.cleanarchitecture.domain.SellPeople;
 import com.example.cleanarchitecture.domain.AbstractSellPeopleImpl;
-import com.example.cleanarchitecture.responsibility.Buyer;
+import com.example.cleanarchitecture.domain.responsibility.Buyer;
 import com.example.cleanarchitecture.domain.allround.AllRounderPeople;
-import com.example.cleanarchitecture.responsibility.DealService;
-import com.example.cleanarchitecture.responsibility.Seller;
+import com.example.cleanarchitecture.domain.responsibility.DealService;
+import com.example.cleanarchitecture.domain.responsibility.Seller;
 import java.util.ArrayList;
 import java.util.List;
 

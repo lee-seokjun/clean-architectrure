@@ -1,9 +1,13 @@
 package com.example.cleanarchitecture.domain.allround;
 
-import com.example.cleanarchitecture.responsibility.Buyer;
-import com.example.cleanarchitecture.responsibility.Seller;
+import com.example.cleanarchitecture.domain.responsibility.Buyer;
+import com.example.cleanarchitecture.domain.responsibility.Seller;
 import java.util.List;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@ToString
 public class AllRounderPeople implements Seller, Buyer {
   private String no;
   private List<String> list ;

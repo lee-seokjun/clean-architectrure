@@ -1,6 +1,6 @@
 package com.example.cleanarchitecture.domain;
 
-import com.example.cleanarchitecture.responsibility.Seller;
+import com.example.cleanarchitecture.domain.responsibility.Seller;
 import java.util.List;
 
 public class SellPeople extends People implements Seller {

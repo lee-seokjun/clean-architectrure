@@ -1,7 +1,7 @@
 package com.example.cleanarchitecture.domain;
 
 
-import com.example.cleanarchitecture.responsibility.DealService;
+import com.example.cleanarchitecture.domain.responsibility.DealService;
 
 public class DealServiceImpl implements DealService {
   public void deal(AbstractBuyPeopleImpl buyPeople, AbstractSellPeopleImpl sellPeople, String itemName, Long price){

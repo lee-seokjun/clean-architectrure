@@ -4,7 +4,7 @@ import com.example.cleanarchitecture.domain.AbstractBuyPeopleImpl;
 import com.example.cleanarchitecture.domain.DealServiceImpl;
 import com.example.cleanarchitecture.domain.AbstractSellPeopleImpl;
 import com.example.cleanarchitecture.persist.PeopleRepository;
-import com.example.cleanarchitecture.responsibility.DealService;
+import com.example.cleanarchitecture.domain.responsibility.DealService;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -41,7 +41,7 @@ public class ServiceAppWith {
     repository.save(buyer);
 
     System.out.println("판매자 : " + repository.getByNo(sellId));
-    System.out.println("구매자 : " +repository.getByNo(buyId));
+    System.out.println("구매자 : " + repository.getByNo(buyId));
   }
 
   public static void main(String[] args) {

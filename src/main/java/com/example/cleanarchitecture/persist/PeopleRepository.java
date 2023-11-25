@@ -7,16 +7,16 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class PeopleRepository {
-  private List<People> people2List = new ArrayList<>();
+  private List<People> peopleList = new ArrayList<>();
 
   public void save(People people2) {
-    if(people2List.stream().anyMatch(l -> l.getNo().equals(people2.getNo()))) {
-      people2List.removeIf(l -> l.getNo().equals(people2.getNo()));
+    if(peopleList.stream().anyMatch(l -> l.getNo().equals(people2.getNo()))) {
+      peopleList.removeIf(l -> l.getNo().equals(people2.getNo()));
     }
-    people2List.add(people2);
+    peopleList.add(people2);
   }
   public People getByNo(String no) {
-    return people2List.stream()
+    return peopleList.stream()
         .filter(l -> l.getNo().equals(no))
         .findFirst().orElseThrow(() ->new RuntimeException("없음"));
   }

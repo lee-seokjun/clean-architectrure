@@ -1,4 +1,4 @@
-package com.example.cleanarchitecture.responsibility;
+package com.example.cleanarchitecture.domain.responsibility;
 
 import com.example.cleanarchitecture.domain.AbstractBuyPeopleImpl;
 import com.example.cleanarchitecture.domain.AbstractSellPeopleImpl;
