@@ -25,15 +25,20 @@ public class ServiceApp {
         new ArrayList<>(),
         50000L
     );
-    repository.add(sellPeople2);
-    repository.add(buyPeople2);
+    repository.save(sellPeople2);
+    repository.save(buyPeople2);
   }
   public void deal (String sellId, String buyId, String sellItem, Long price) {
-    SellPeople seller =  new SellPeople(repository.getSeller(sellId));
-    BuyPeople buyer =  new BuyPeople(repository.getBuyer(buyId));
+    SellPeople seller =  new SellPeople(repository.getByNo(sellId));
+    BuyPeople buyer =  new BuyPeople(repository.getByNo(buyId));
+
     seller.sell(sellItem, price);
     buyer.buy(sellItem, price);
+    repository.save(seller);
+    repository.save(buyer);
 
+    System.out.println("판매자 : " + repository.getByNo(sellId));
+    System.out.println("구매자 : " +repository.getByNo(buyId));
   }
 
   public static void main(String[] args) {

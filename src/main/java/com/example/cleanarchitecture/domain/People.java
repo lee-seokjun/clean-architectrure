@@ -2,8 +2,10 @@ package com.example.cleanarchitecture.domain;
 
 import java.util.List;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
+@ToString
 public class People {
   private String no;
   private List<String> list ;

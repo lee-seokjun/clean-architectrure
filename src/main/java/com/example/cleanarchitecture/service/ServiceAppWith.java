@@ -28,14 +28,20 @@ public class ServiceAppWith {
         new ArrayList<>(),
         50000L
     );
-    repository.add(sellPeople2);
-    repository.add(buyPeople2);
+    repository.save(sellPeople2);
+    repository.save(buyPeople2);
   }
   public void deal (String sellId, String buyId, String sellItem, Long price) {
-    AbstractSellPeopleImpl seller =  new AbstractSellPeopleImpl(repository.getSeller(sellId));
-    AbstractBuyPeopleImpl buyer =  new AbstractBuyPeopleImpl(repository.getBuyer(buyId));
+    AbstractSellPeopleImpl seller =  new AbstractSellPeopleImpl(repository.getByNo(sellId));
+    AbstractBuyPeopleImpl buyer =  new AbstractBuyPeopleImpl(repository.getByNo(buyId));
 
     dealService.deal(buyer, seller, sellItem, price);
+
+    repository.save(seller);
+    repository.save(buyer);
+
+    System.out.println("판매자 : " + repository.getByNo(sellId));
+    System.out.println("구매자 : " +repository.getByNo(buyId));
   }
 
   public static void main(String[] args) {
