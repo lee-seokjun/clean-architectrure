@@ -1,12 +1,12 @@
 package com.example.cleanarchitecture;
 
 import com.example.cleanarchitecture.domain.BuyPeople;
-import com.example.cleanarchitecture.domain.BuyPeople2;
+import com.example.cleanarchitecture.domain.AbstractBuyPeopleImpl;
 import com.example.cleanarchitecture.domain.DealServiceImpl;
-import com.example.cleanarchitecture.domain.SellPeople2;
-import com.example.cleanarchitecture.responsibility.Buyer;
-import com.example.cleanarchitecture.domain.allround.People;
 import com.example.cleanarchitecture.domain.SellPeople;
+import com.example.cleanarchitecture.domain.AbstractSellPeopleImpl;
+import com.example.cleanarchitecture.responsibility.Buyer;
+import com.example.cleanarchitecture.domain.allround.AllRounderPeople;
 import com.example.cleanarchitecture.responsibility.DealService;
 import com.example.cleanarchitecture.responsibility.Seller;
 import java.util.ArrayList;
@@ -15,18 +15,18 @@ import java.util.List;
 public class app {
 
   public static void main(String[] args) {
-    Seller seller = new People(
+    Seller seller = new AllRounderPeople(
         "950629-11",
         new ArrayList<>(List.of("iphone")),
         50000L
     );
 
-    Buyer buyer = new People(
+    Buyer buyer = new AllRounderPeople(
         "950629-2",
         new ArrayList<>(),
         50000L
     );
-    People allRounder = new People(
+    AllRounderPeople allRounder = new AllRounderPeople(
         "950629-13",
         new ArrayList<>(),
         50000L
@@ -64,13 +64,13 @@ public class app {
       System.out.println("거래 실패");
     }
 
-    SellPeople2 sellPeople2 = new SellPeople2(
+    AbstractSellPeopleImpl sellPeople2 = new AbstractSellPeopleImpl(
         "950629-13",
         new ArrayList<>(List.of("iphone")),
         50000L
     );
 
-    BuyPeople2 buyPeople2 = new BuyPeople2(
+    AbstractBuyPeopleImpl buyPeople2 = new AbstractBuyPeopleImpl(
         "950629-14",
         new ArrayList<>(),
         50000L

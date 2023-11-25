@@ -1,14 +1,14 @@
 package com.example.cleanarchitecture.domain.abst;
 
-import com.example.cleanarchitecture.domain.People2;
+import com.example.cleanarchitecture.domain.People;
 import java.util.List;
 
-public abstract class AbstractBuyPeople extends People2 {
+public abstract class AbstractBuyPeople extends People {
 
   public AbstractBuyPeople(String no, List<String> list, Long money) {
     super(no, list, money);
   }
-  public AbstractBuyPeople(People2 people2) {
+  public AbstractBuyPeople(People people2) {
     super(people2.getNo(), people2.getList(), people2.getMoney());
   }
 

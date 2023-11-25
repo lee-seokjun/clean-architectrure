@@ -3,12 +3,14 @@ package com.example.cleanarchitecture.domain;
 import com.example.cleanarchitecture.responsibility.Seller;
 import java.util.List;
 
-public class SellPeople extends People2 implements Seller {
+public class SellPeople extends People implements Seller {
 
   public SellPeople(String no, List<String> list, Long money) {
     super(no, list, money);
   }
-
+  public SellPeople(People people2) {
+    super(people2.getNo(), people2.getList(), people2.getMoney());
+  }
   @Override
   public void sell(String itemName, Long price) {
     if(price == null) {

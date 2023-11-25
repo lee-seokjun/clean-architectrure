@@ -4,12 +4,12 @@ import com.example.cleanarchitecture.responsibility.Buyer;
 import com.example.cleanarchitecture.responsibility.Seller;
 import java.util.List;
 
-public class People implements Seller, Buyer {
+public class AllRounderPeople implements Seller, Buyer {
   private String no;
   private List<String> list ;
   private Long money;
 
-  public People(String no, List<String> list, Long money) {
+  public AllRounderPeople(String no, List<String> list, Long money) {
     this.no = no;
     this.list = list;
     this.money = money;
@@ -82,8 +82,8 @@ public class People implements Seller, Buyer {
   private void addItem(String item) {
     list.add(item);
   }
-  public static People sample() {
-    return new People(
+  public static AllRounderPeople sample() {
+    return new AllRounderPeople(
         "950629-1",
         List.of("iphone"),
         50000L

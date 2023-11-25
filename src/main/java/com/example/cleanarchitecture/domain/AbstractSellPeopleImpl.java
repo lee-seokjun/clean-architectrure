@@ -3,13 +3,13 @@ package com.example.cleanarchitecture.domain;
 import com.example.cleanarchitecture.domain.abst.AbstractSellPeople;
 import java.util.List;
 
-public class SellPeople2 extends AbstractSellPeople {
+public class AbstractSellPeopleImpl extends AbstractSellPeople {
 
-  public SellPeople2(String no, List<String> list, Long money) {
+  public AbstractSellPeopleImpl(String no, List<String> list, Long money) {
     super(no, list, money);
   }
 
-  public SellPeople2(People2 people2) {
+  public AbstractSellPeopleImpl(People people2) {
     super(people2);
   }
 

@@ -4,12 +4,12 @@ import java.util.List;
 import lombok.Getter;
 
 @Getter
-public class People2  {
+public class People {
   private String no;
   private List<String> list ;
   private Long money;
 
-  protected People2(String no, List<String> list, Long money) {
+  protected People(String no, List<String> list, Long money) {
     this.no = no;
     this.list = list;
     this.money = money;
@@ -28,8 +28,8 @@ public class People2  {
   protected void addItem(String item) {
     list.add(item);
   }
-  public static People2 sample() {
-    return new People2(
+  public static People sample() {
+    return new People(
         "950629-1",
         List.of("iphone"),
         50000L
